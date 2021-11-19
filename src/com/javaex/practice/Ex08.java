@@ -11,7 +11,7 @@ public class Ex08 {
 			int[] Ran = new int[6];
 						
 			for(int i=0; i<Ran.length; i++) {
-				Ran[i] = (int)(Math.random()*(45-1+1)+1);
+				Ran[i] = (int)(Math.random()*45+1);
 				//숫자범위 Mate식*(최댓값-최솟값+1)+최솟값
 				if (i==0) {
 					System.out.print(Ran[i]+"\t");
@@ -19,14 +19,14 @@ public class Ex08 {
 				}
 				for(int j=0; j<i&&i>=1; j++) {
 					if(Ran[i]==Ran[j]) {
-						Ran[i] = (int)(Math.random()*(45-1+1)+1);
-					}					
+						Ran[i] = (int)(Math.random()*45+1);
+					}
+					else if(Ran[i]==Ran[0]) {
+						Ran[i] = (int)(Math.random()*45+1);
+					}
 				}
 				System.out.print(Ran[i]+"\t");
 			}
-			 
-			
-		
 		sc.close();
 		
 	}
